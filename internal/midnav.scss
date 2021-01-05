@@ -1,0 +1,125 @@
+/* ====== MIDNAV  ====== */
+
+//@import 'sass/svg/svg';
+//
+///* Icons */
+//
+//.statebutton-icon,
+//.togglebutton-icon,
+//.toolbar-icon {
+//  opacity: 0.6;
+//}
+
+.midnav {
+  margin-top: 5px;
+}
+
+.midnav .toolbar a,
+.topnav .toolbar a {
+  color:white!important;
+  opacity:0.6;
+}
+
+.midnav .toolbar a:hover,
+.topnav .toolbar a:hover {
+  color:white!important;
+  opacity:1;
+}
+
+.toolbar > a:hover {
+  color: #E2CF6A!important;
+}
+
+.midnav li.menu > a {
+  border-color:transparent;
+}
+
+.midnav li.menu > ul.sub {
+  margin-top:4px;
+  margin-left:10px;
+}
+
+.midnav li.menu > a.selected {
+  border-color:transparent!important;
+  color:#E4D159!important;
+  opacity:1;
+}
+
+.midnav li.menu > a.selected:hover {
+  margin-right:2px!important;
+}
+
+.midnav li ul.sub li a {
+  background-color: #86A1AF;
+  font-weight: 100;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.midnav li ul.sub {
+  border:none!important;
+  margin: 3px 0 0 2px;
+  background-color: #86A1AF;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.midnav .sub .toolbar a {
+  /* TODO: remove? */
+}
+
+/* midnav stop */
+
+//
+//.statebutton-icon:hover,
+//.togglebutton-icon:hover,
+//.toolbar-icon:hover {
+//  //opacity: 1;
+//  opacity: 0;
+//  border-color: transparent;
+//}
+//
+//.statebutton-icon a:hover,
+//.togglebutton-icon a:hover,
+//.toolbar-icon a:hover {
+//  //opacity: 0!important;
+//  opacity: 1!important;
+//  border-color: transparent;
+//
+//}
+//
+///* Here, the buttons are selected */
+//
+//.toolbar-icon a.selected,
+//.statebutton-icon a.selected {
+//  margin-right:0;
+//}
+//
+//.toolbar-icon a.selected:hover {
+//  margin-top: 0!important;
+//  margin-left:1px!important;
+//  margin-right:1px!important;
+//}
+//
+//ul.midnav li.menu a:hover,
+//ul.midnav li.menu a.hover,
+//ul.midnav li.menu-icon a:hover,
+//ul.midnav li.menu-icon a.hover,
+//ul.midnav li.toolbar-icon a:hover,
+//ul.midnav li.toolbar a:hover,
+//ul.midnav li.statebutton-icon a:hover,
+//ul.midnav li.togglebutton-icon a:hover,
+//div.themes-expander:hover  {
+//  border: 1px solid transparent;
+//  border-radius: 0;
+//}
+//
+//ul.midnav li.menu a.selected,
+//ul.midnav li.menu-icon a.selected,
+//ul.midnav li.statebutton-icon a.selected,
+//ul.midnav li.statebutton a.selected,
+//ul.midnav li.togglebutton-icon a.toggle_selected {
+//  border: 1px solid #ccc;
+//  border-radius: 0;
+//}

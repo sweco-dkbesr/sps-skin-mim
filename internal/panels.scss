@@ -1,0 +1,109 @@
+#panel-brand {
+  height: 41px;
+  background: #3B4449;
+  border: none;
+  display: none;
+}
+
+#panel-top {
+  background: white;
+  border-bottom: 0;
+}
+
+#panel-top .li > a:hover {
+  color: #E2CF6A!important;
+}
+
+#panel-top .inner.left {
+  float:right;
+}
+
+@import 'sass/svg/svg';
+
+.spatial-suite {
+  background-size: contain;
+  @include icon-mim-logo;
+  width: 320px;
+  height: 64px;
+}
+
+.spatial-suite img {
+  visibility: hidden;
+}
+
+#panel-bottom {
+  background: $primary-color;
+  border-bottom: 0;
+}
+
+ul.topnav li.label,
+ul.topnav li.toolbar {
+  padding: 3px;
+}
+
+ul.topnav li.toolbar-icon,
+ul.topnav li.statebutton-icon,
+ul.topnav li.statebutton {
+  padding-right: 5px;
+}
+
+
+ul.topnav li.toolbar-icon a,
+ul.topnav li.statebutton-icon a,
+ul.topnav li.statebutton a,
+ul.topnav li.toolbar a,
+ul.topnav li.label a,
+ul.topnav li.toolspacer-txt a {
+  color: $primary-color!important;
+  opacity: 0.8;
+}
+
+ul.topnav li.menu a span {
+  color: $primary-color;
+  opacity: 0.8;
+}
+
+ul.topnav li.menu > a:hover,
+ul.topnav li.toolbar > a:hover,
+ul.topnav li.toolbar > a:hover {
+  color: $primary-color!important;
+  opacity: 1;
+  background-color: transparent!important;
+}
+
+.spatial-suite {
+  float:left;
+  font-size:16px;
+  margin-left:9px;
+  margin-top:9px;
+}
+
+.spatial-suite img {
+  visibility: hidden;
+}
+
+#panel-brand .left {
+  border: none;
+  background-size: 100px;
+  margin-left: 7px;
+}
+#panel-middle {
+  background-color: $primary-color;
+  background: $primary-color;
+  margin: 10px 0 10px 0;
+  border: none!important;
+  border-radius: 0;
+  width: 100%;
+}
+
+//.toolspacer-notxt a {
+//  border-right:none!important;
+//  border-left:none!important;
+//  opacity: 0.8;
+//}
+
+#panel-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,113 +1,307 @@
-/*
-<li class="toolbar-icon" id="favorites_save">
-  <a title="Gem den nuværende kortopsætning som favorit">
-    <img src="/skins/sweco/images/buttons/icon_add_favorites.png?ver=4.2.1"
-         alt="Gem den nuværende kortopsætning som favorit">
-         <span class="toolbar-icon-txt">
-            Gem som favorit
-         </span>
-  </a>
-</li>
- */
+@import 'sass/svg/svg';
 
-.toolbar-icon#favorites_save a {
+$icon-size: 12px;
+$icon-padding: 3px;
 
+%icon-base {
+  background-size: contain;
+  width: $icon-size;
+  height: $icon-size;
+  padding: $icon-padding;
 }
 
-.toolbar-icon#add_user-theme a {
-
+/* Back */
+%back {
+  @extend %icon-base;
+  @include icon-back;
 }
 
-.toolbar-icon#down a {
-
+#back a {
+  @extend %back;
 }
 
-.toolbar-icon#e-knap a {
-
+#back a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#emdb a {
-
+/* Extended themeselector */
+%extended-themeselector {
+  @extend %icon-base;
+  @include icon-extended-themeselector;
 }
 
-.toolbar-icon#eraser a {
-
+#extended-themeselector a {
+  @extend %extended-themeselector;
 }
 
-.toolbar-icon#fullextent a {
-
+#extended-themeselector a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#globe a {
-
+/* Dsfilter */
+%dsfilter {
+  @extend %icon-base;
+  @include icon-dsfilter;
 }
 
-.toolbar-icon#here a {
-
+#dsfilter a {
+  @extend %dsfilter;
 }
 
-.toolbar-icon#info a {
-
+#dsfilter a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#myposition a {
-
+/* Theme Collapse */
+%theme_collapse {
+  @extend %icon-base;
+  @include icon-theme_collapse;
 }
 
-.toolbar-icon#next a {
-
+#theme_collapse a {
+  @extend %theme_collapse;
 }
 
-.toolbar-icon#off-lock a {
-
+#theme_collapse a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#on-lock a {
-
+/* Workinglayer remove */
+%workinglayer-remove {
+  @extend %icon-base;
+  @include icon-eraser;
 }
 
-.toolbar-icon#pan a {
-
+#workinglayer-remove a {
+  @extend %back;
 }
 
-.toolbar-icon#power-off a {
-
+#workinglayer-remove a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#power-on a {
-
+/* Forward */
+%forward {
+  @extend %icon-base;
+  @include icon-forward;
 }
 
-.toolbar-icon#previous a {
-
+#forward a {
+  @extend %forward;
 }
 
-.toolbar-icon#print a {
-
+#forward a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#search a {
-
+/* Favorites */
+%favorites_save {
+  @extend %icon-base;
+  @include icon-favorites_save;
 }
 
-.toolbar-icon#theme-store_setting a {
-
+#favorites_save a {
+  @extend %favorites_save;
 }
 
-.toolbar-icon#themes_expand_horiz a {
-
+#favorites_save a img {
+  visibility: hidden;
 }
 
-.toolbar-icon#up a {
-
+/* Fullextent */
+%fullextent {
+  @extend %icon-base;
+  @include icon-fullextent;
 }
 
-/* Filters for hover and selected */
+#fullextent a {
+  @extend %fullextent;
+}
+
+#fullextent a img {
+  visibility: hidden;
+}
+
+/* Myposition */
+%myposition {
+  @extend %icon-base;
+  @include icon-myposition;
+}
+
+#myposition a {
+  @extend %myposition;
+}
+
+#myposition a img {
+  visibility: hidden;
+}
+
+/* Eknap */
+%eknap {
+  @extend %icon-base;
+  @include icon-eknap;
+}
+
+#eknap a {
+  @extend %eknap;
+}
+
+#eknap a img {
+  visibility: hidden;
+}
+
+/* INFO */
+%info {
+  @extend %icon-base;
+  @include icon-info;
+}
+
+#info a {
+  @extend %info;
+}
+
+#info a img {
+  visibility: hidden;
+}
+
+/* Pan */
+%pan {
+  @extend %icon-base;
+  @include icon-pan;
+}
+
+#pan a {
+  @extend %pan;
+}
+
+#pan a img {
+  visibility: hidden;
+}
+
+/* Print quick */
+/* INFO */
+%print_quick {
+  @extend %icon-base;
+  @include icon-print;
+}
+
+#print_quick a {
+  @extend %print_quick;
+}
+
+#print_quick a img {
+  visibility: hidden;
+}
+
+/* Reset themes */
+%resetthemes {
+  @extend %icon-base;
+  @include icon-resetthemes;
+}
+
+#resetthemes a {
+  @extend %resetthemes;
+}
+
+#resetthemes a img {
+  visibility: hidden;
+}
+
+%up {
+  @extend %icon-base;
+  @include icon-up;
+}
+
+.themes-expander.up {
+  @extend %up;
+}
+
+.themes-expander.down {
+  @extend %up;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+
+/*Theme Store Setting*/
+%theme_store_setting {
+  @extend %icon-base;
+  @include icon-theme_store_setting;
+}
+
+#theme_store_setting a {
+  @extend %theme_store_setting;
+}
+
+#theme_store_setting a img {
+  visibility: hidden;
+}
+
+/*zoomin*/
+%zoomin {
+  @extend %icon-base;
+  @include icon-zoomin;
+}
+
+#zoomin a {
+  @extend %zoomin;
+}
+
+#zoomin a img {
+  visibility: hidden;
+}
+
+%expander {
+  width: 7px;
+  height: 4px;
+  //@extend %icon-base;
+  @include icon-expander;
+}
+
+.expander.up {
+  @extend %expander;
+}
+
+.expander.down {
+  @extend %expander;
+  transform: rotate(180deg);
+}
+
 
 .toolbar-icon a.selected {
-  /* TODO: change color by applying a filter to xxx */
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
-.toolbar-icon a:hover {
-  /* TODO: change color by applying a filter to yyy */
+ul.midnav li.statebutton-icon a:hover,
+.themes-expander:hover,
+li.statebutton-icon a:hover,
+li.toolbar-icon a:hover,
+ul.midnav li.toolbar-icon a:hover {
+  border-color: transparent;
+  visibility: visible;
+  background-color: transparent!important;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
+
+ul.midnav li.statebutton-icon a.selected {
+  border-color: transparent;
+  visibility: visible;
+  background-color: transparent!important;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+ul.midnav li.statebutton-icon a.selected:hover {
+  background-color: transparent;
+}
+
+.themes-expander {
+  padding-top: 13px;
+}
+
+//ul.midnav li.menu a.selected,
+//ul.midnav li.menu-icon a.selected,
+//ul.midnav li.statebutton-icon a.selected,
+//ul.midnav li.statebutton a.selected,
+//ul.midnav li.togglebutton-icon a.toggle_selected {
+//  background-color: $primary-color !important;
+//  border: none;
+//}
