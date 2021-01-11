@@ -1,17 +1,30 @@
-/* ====== MIDNAV  ====== */
-
-//@import 'sass/svg/svg';
-//
-///* Icons */
-//
-//.statebutton-icon,
-//.togglebutton-icon,
-//.toolbar-icon {
-//  opacity: 0.6;
-//}
+/* ====== MIDNAV  incl menus ====== */
 
 .midnav {
+
   margin-top: 5px;
+  margin-bottom: 5px;
+
+  li.menu  {
+
+    a {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    ul.sub {
+      li.toolspacer-txt {
+        a {
+          span {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+  }
+
 }
 
 .midnav .toolbar a,
@@ -22,12 +35,12 @@
 
 .midnav .toolbar a:hover,
 .topnav .toolbar a:hover {
-  color:white!important;
+  color:$contrast-color;
   opacity:1;
 }
 
 .toolbar > a:hover {
-  color: #E2CF6A!important;
+  color: $contrast-color!important;
 }
 
 .midnav li.menu > a {
@@ -35,13 +48,13 @@
 }
 
 .midnav li.menu > ul.sub {
-  margin-top:4px;
-  margin-left:10px;
+  margin-top: 4px;
+  margin-left: 10px;
 }
 
 .midnav li.menu > a.selected {
   border-color:transparent!important;
-  color:#E4D159!important;
+  color:$contrast-color!important;
   opacity:1;
 }
 
@@ -49,8 +62,48 @@
   margin-right:2px!important;
 }
 
+ul.midnav li.menu a.selected {
+  background: transparent;
+}
+
+.menu > a {
+  text-transform: uppercase;
+  background-image: none !important;
+}
+
+li.menu a {
+  color: white !important;
+  opacity: 0.6;
+  padding-right: 10px !important;
+  padding-top: 5px !important;
+}
+
+li.toolbar a:hover,
+li.menu a:hover {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  border-right: $primary-color !important;
+  border-bottom: $primary-color !important;
+  opacity: 1;
+  margin-bottom: 1px !important;
+  margin-top: 0;
+  margin-right: 2px !important;
+  color: $contrast-color;
+}
+
+.menu .sub {
+  margin-top: 9px;
+  background-color: $secondary-color !important;
+  border: none;
+  box-shadow: none;
+}
+
+.midnav .sub .toolbar a {
+  background-color: $secondary-color !important;
+}
+
 .midnav li ul.sub li a {
-  background-color: #86A1AF;
+  background-color: $secondary-color;
   font-weight: 100;
   opacity: 1;
   border-radius: 0;
@@ -59,67 +112,55 @@
 .midnav li ul.sub {
   border:none!important;
   margin: 3px 0 0 2px;
-  background-color: #86A1AF;
+  background: $secondary-color;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-.midnav .sub .toolbar a {
-  /* TODO: remove? */
+ul.midnav li ul.sub li.toolspacer-txt a,
+ul.midnav li ul.sub li.toolspacer-notxt a
+{
+  background: $secondary-color;
+  opacity: 0.8;
 }
 
-/* midnav stop */
+ul.midnav li ul.sub li.togglebutton a {
+  background: $secondary-color;
+}
 
-//
-//.statebutton-icon:hover,
-//.togglebutton-icon:hover,
-//.toolbar-icon:hover {
-//  //opacity: 1;
-//  opacity: 0;
-//  border-color: transparent;
+
+ul.midnav li ul.sub li.toolspacer-txt a:hover {
+  background: $secondary-color;
+  opacity: 0.8;
+}
+
+//ul.midnav li ul.sub li.toolspacer-txt a:hover,
+//ul.midnav li ul.sub li.toolspacer-notxt a:hover {
+//  opacity: 1;
+//  background: $secondary-color!important;
+//  margin-bottom: 4px;
 //}
+
+li.menu a.selected {
+  color: $contrast-color;
+  background: $primary-color;
+}
+
+ul.sub li.toolspacer-txt a:hover {
+  background: $secondary-color!important;
+  margin-bottom: 4px !important;
+  //background-color: $primary-color !important;
+  //border-color: $primary-color !important;
+  //border-right: $primary-color !important;
+  //border-bottom: $primary-color !important;
+  border-bottom: 1px solid #ccc!important;
+  //opacity: 1;
+  //margin-top: 0;
+  //margin-right: 2px !important;
+  //color: $contrast-color;
+}
 //
-//.statebutton-icon a:hover,
-//.togglebutton-icon a:hover,
-//.toolbar-icon a:hover {
-//  //opacity: 0!important;
-//  opacity: 1!important;
-//  border-color: transparent;
-//
-//}
-//
-///* Here, the buttons are selected */
-//
-//.toolbar-icon a.selected,
-//.statebutton-icon a.selected {
-//  margin-right:0;
-//}
-//
-//.toolbar-icon a.selected:hover {
-//  margin-top: 0!important;
-//  margin-left:1px!important;
-//  margin-right:1px!important;
-//}
-//
-//ul.midnav li.menu a:hover,
-//ul.midnav li.menu a.hover,
-//ul.midnav li.menu-icon a:hover,
-//ul.midnav li.menu-icon a.hover,
-//ul.midnav li.toolbar-icon a:hover,
-//ul.midnav li.toolbar a:hover,
-//ul.midnav li.statebutton-icon a:hover,
-//ul.midnav li.togglebutton-icon a:hover,
-//div.themes-expander:hover  {
-//  border: 1px solid transparent;
-//  border-radius: 0;
-//}
-//
-//ul.midnav li.menu a.selected,
-//ul.midnav li.menu-icon a.selected,
-//ul.midnav li.statebutton-icon a.selected,
-//ul.midnav li.statebutton a.selected,
-//ul.midnav li.togglebutton-icon a.toggle_selected {
-//  border: 1px solid #ccc;
-//  border-radius: 0;
+//ul.midnav li ul.sub li.toolspacer-txt a:hover {
+//  border-bottom: 1px solid #ccc!important;
 //}

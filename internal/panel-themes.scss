@@ -9,35 +9,42 @@
 
 #panel-themes-header {
   background: $primary-color;
-  margin-top: 1px!important;
-  border: none!important;
+  margin-top: 1px !important;
+  border: none !important;
   border-radius: 0;
   width: 100%;
+}
 
+/* Adapted to 3.12*/
+#panel-themes-body {
+  position: relative;
+  zoom: 1;
+  float: left;
+  opacity: 1;
+  border-left: none;
 }
 
 /* #themegrid */
 
 .themegroup {
   margin: 0;
-  background-color: $secondary-color;
+  background: $secondary-color;
 }
 
 
 .themegroupheader {
-  background-color: $secondary-color;
   background: $secondary-color;
   opacity: 1;
 }
 
 
 .themegroupheader:hover {
-  background-color: hsla(200,20%,65%,1);
+  background: $secondary-color-light;
 }
 
 .themegroupheader > h4 {
   color: white;
-  opacity:1;
+  opacity: 1;
   font-weight: 400;
 }
 
@@ -45,16 +52,15 @@
 .themegroupheader.sub {
   margin-left: 0;
   margin-right: 0;
-  background-color: hsla(200,20%,85%,1);
-  background: hsla(200,20%,85%,1);
-  border-bottom-color:#fafafa;
+  background: $secondary-color-light;
+  border-bottom-color: #fafafa;
 }
 
-.themegroupheader.sub > h4  {
-  color:black!important;
-  padding-left:3px;
-  opacity:1;
-  font-weight:400;
+.themegroupheader.sub > h4 {
+  color: black !important;
+  padding-left: 3px;
+  opacity: 1;
+  font-weight: 400;
 }
 
 /* .theme */
@@ -62,21 +68,22 @@
 .theme {
   background-image: none;
   cursor: auto;
+  border-bottom: none;
 }
 
 .theme:hover {
-  background: $secondary-color!important;
+  background: $secondary-color !important;
 }
 
 /* A small theme :) */
 
 .theme.small {
-  background: $secondary-color-light!important;
+  background: $secondary-color-light !important;
 }
 
 // TODO: $secondary-color-light - make lighter
 .theme.small:hover {
-  background: hsla(200,20%,98%,1)!important;
+  background: lighten($secondary-color-light, 10%)
 }
 
 .theme.small .txt h4 {
@@ -92,8 +99,8 @@
 
 .theme .horiz-spacer {
   float: left;
-  border-top: 1px dotted rgba(128, 128, 128, 0.31);
-  border-bottom:none;
+  border-top: 1px dotted $primary-color;
+  border-bottom: none;
   width: 100%;
   margin: 0;
   display: none;
@@ -105,12 +112,12 @@
   width: 43px;
   height: auto;
   right: 0;
-  margin-top:0;
+  margin-top: 0;
 }
 
 
 .themegroupcontainer .theme.small h4 {
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 .themes-expander.up {
@@ -130,27 +137,27 @@
 }
 
 .themes-expander:hover {
-  border-color:transparent!important;
-  opacity:1;
+  border-color: transparent !important;
+  opacity: 1;
 }
 
 
 .counter.toggle,
 .themegroupheader .counter {
-  color:white;
+  color: white;
 }
 
 .counter.toggle:hover {
-  background-color:transparent;
-  border-color:transparent;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .expander.down:hover {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .expander.up:hover {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .theme.small .state, .theme.small .delete, .theme.small .add {
@@ -165,33 +172,33 @@
 
 .off.state {
   background-size: 17px 17px;
-  border: none!important;
-  opacity:1;
+  border: none !important;
+  opacity: 1;
 }
 
 .on.state:hover {
   background-size: 17px 17px;
   border: none;
-  opacity: 0.6!important;
+  opacity: 0.6 !important;
 }
 
 .off.state:hover {
   background-size: 17px 17px;
-  border: none!important;
-  opacity:0.3!important;
+  border: none !important;
+  opacity: 0.3 !important;
 }
 
 .on.state.lock {
-  border: none!important;
-  opacity:1!important;
+  border: none !important;
+  opacity: 1 !important;
 }
 
 .off.state.lock {
-  border: none!important;
-  opacity:0.3!important;
+  border: none !important;
+  opacity: 0.3 !important;
 }
 
-.gr-loading, .gr-loading:hover  {
+.gr-loading, .gr-loading:hover {
   background-color: #eee;
   background-image: url("../images/modules/themeselectoractive/gr-loader.gif");
   background-position: center center;
@@ -206,14 +213,79 @@
 }
 */
 
-#SpatialMap_Control_SpatialMapPanZoomBar_12
-{
+#SpatialMap_Control_SpatialMapPanZoomBar_12 {
   /*   visibility: hidden;*/
 }
+
 #themegroup-basemap_tgcontainer > div > div span {
   /*visibility: hidden;*/
 }
 
 .themeStoreLabel {
   color: white;
+}
+
+.themegroupheader {
+
+  %up {
+    @include icon-up;
+    width: 7px;
+    height: 4px;
+    background-size: contain;
+    margin-right: 5px;
+    margin-top: 9px;
+  }
+
+  .expander.up {
+    @extend %up;
+  }
+
+  .expander.down {
+    @extend %up;
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+
+}
+
+.themegroup {
+
+  %up-black {
+    @include icon-up-black;
+    width: 7px;
+    height: 4px;
+    background-size: contain;
+    margin-right: 5px;
+    margin-top: 9px;
+    filter: invert(30%) sepia(19%) saturate(1311%) hue-rotate(83deg) brightness(97%) contrast(88%);
+  }
+
+  /* black to primary */
+
+  .expander.up {
+    @extend %up-black;
+  }
+
+  .expander.down {
+    @extend %up-black;
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+
+}
+
+%state-button {
+  width: 17px;
+  height: 17px;
+}
+
+.theme .state.off {
+  @extend %state-button;
+  @include icon-power-off;
+}
+
+.theme .state.on {
+  @extend %state-button;
+  @include icon-power-on-black;
+  filter: invert(30%) sepia(19%) saturate(1311%) hue-rotate(83deg) brightness(97%) contrast(88%);
 }

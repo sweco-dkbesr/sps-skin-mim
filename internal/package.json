@@ -1,0 +1,34 @@
+{
+  "name": "mim",
+  "version": "1.0.0",
+  "description": "The MIM 2020 skin",
+  "author": "Bernhard Snizek",
+  "main": "index.js",
+  "repository": "https://github.com/sweco-dkbesr/sps-skin-mim.git",
+  "readme": "README.md",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "run-grunt": "npx grunt",
+    "sass-build": "sass custom.scss ../css/custom-sass.css",
+    "sass-build-compressed": "sass custom.scss ../css/custom-sass.css --style=compressed",
+    "sass-watch": "sass custom.scss ../css/custom-sass.css --watch",
+    "reload-module-mim": "curl http://localhost:8080/admin?command=modules&deploy=mim"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "dependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-grunticon": "^2.3.2",
+    "grunticon-lib": "^1.2.3",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "react-scripts": "^4.0.1",
+    "sass": "^1.32.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  }
+}

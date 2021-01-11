@@ -1,0 +1,80 @@
+@mixin icon-SwecoLogo-black-ani { background-image: url('png/SwecoLogo-black-ani.png'); background-repeat: no-repeat; }
+
+@mixin icon-SwecoLogo-black { background-image: url('png/SwecoLogo-black.png'); background-repeat: no-repeat; }
+
+@mixin icon-SwecoLogo { background-image: url('png/SwecoLogo.png'); background-repeat: no-repeat; }
+
+@mixin icon-add-favourite { background-image: url('png/add-favourite.png'); background-repeat: no-repeat; }
+
+@mixin icon-add-user-theme { background-image: url('png/add-user-theme.png'); background-repeat: no-repeat; }
+
+@mixin icon-back { background-image: url('png/back.png'); background-repeat: no-repeat; }
+
+@mixin icon-down { background-image: url('png/down.png'); background-repeat: no-repeat; }
+
+@mixin icon-dsfilter { background-image: url('png/dsfilter.png'); background-repeat: no-repeat; }
+
+@mixin icon-eknap { background-image: url('png/eknap.png'); background-repeat: no-repeat; }
+
+@mixin icon-emdb { background-image: url('png/emdb.png'); background-repeat: no-repeat; }
+
+@mixin icon-eraser { background-image: url('png/eraser.png'); background-repeat: no-repeat; }
+
+@mixin icon-expander { background-image: url('png/expander.png'); background-repeat: no-repeat; }
+
+@mixin icon-extended-themeselector { background-image: url('png/extended-themeselector.png'); background-repeat: no-repeat; }
+
+@mixin icon-favorites_save { background-image: url('png/favorites_save.png'); background-repeat: no-repeat; }
+
+@mixin icon-forward { background-image: url('png/forward.png'); background-repeat: no-repeat; }
+
+@mixin icon-fullextent { background-image: url('png/fullextent.png'); background-repeat: no-repeat; }
+
+@mixin icon-globe { background-image: url('png/globe.png'); background-repeat: no-repeat; }
+
+@mixin icon-here { background-image: url('png/here.png'); background-repeat: no-repeat; }
+
+@mixin icon-info { background-image: url('png/info.png'); background-repeat: no-repeat; }
+
+@mixin icon-mim-logo { background-image: url('png/mim-logo.png'); background-repeat: no-repeat; }
+
+@mixin icon-myposition { background-image: url('png/myposition.png'); background-repeat: no-repeat; }
+
+@mixin icon-next { background-image: url('png/next.png'); background-repeat: no-repeat; }
+
+@mixin icon-off-lock { background-image: url('png/off-lock.png'); background-repeat: no-repeat; }
+
+@mixin icon-on-lock { background-image: url('png/on-lock.png'); background-repeat: no-repeat; }
+
+@mixin icon-pan { background-image: url('png/pan.png'); background-repeat: no-repeat; }
+
+@mixin icon-power-off { background-image: url('png/power-off.png'); background-repeat: no-repeat; }
+
+@mixin icon-power-on-black { background-image: url('png/power-on-black.png'); background-repeat: no-repeat; }
+
+@mixin icon-power-on { background-image: url('png/power-on.png'); background-repeat: no-repeat; }
+
+@mixin icon-previous { background-image: url('png/previous.png'); background-repeat: no-repeat; }
+
+@mixin icon-print { background-image: url('png/print.png'); background-repeat: no-repeat; }
+
+@mixin icon-resetthemes { background-image: url('png/resetthemes.png'); background-repeat: no-repeat; }
+
+@mixin icon-search { background-image: url('png/search.png'); background-repeat: no-repeat; }
+
+@mixin icon-theme-collapse { background-image: url('png/theme-collapse.png'); background-repeat: no-repeat; }
+
+@mixin icon-theme-store-setting { background-image: url('png/theme-store-setting.png'); background-repeat: no-repeat; }
+
+@mixin icon-theme_collapse { background-image: url('png/theme_collapse.png'); background-repeat: no-repeat; }
+
+@mixin icon-theme_store_setting { background-image: url('png/theme_store_setting.png'); background-repeat: no-repeat; }
+
+@mixin icon-themes_expand_horiz { background-image: url('png/themes_expand_horiz.png'); background-repeat: no-repeat; }
+
+@mixin icon-up-black { background-image: url('png/up-black.png'); background-repeat: no-repeat; }
+
+@mixin icon-up { background-image: url('png/up.png'); background-repeat: no-repeat; }
+
+@mixin icon-zoomin { background-image: url('png/zoomin.png'); background-repeat: no-repeat; }
+

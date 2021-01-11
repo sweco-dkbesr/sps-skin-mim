@@ -1,0 +1,37 @@
+/* Top level scss for the mim skin */
+
+/* Import font */
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
+
+/* Define colours */
+
+$primary-color: #0E2C21;
+
+$secondary-color: #296238;
+$secondary-color-light:  #82C17A;
+
+$contrast-color: #FF7300;
+
+#basegrid-right {
+  //background-color: rgb(59, 68, 73);
+  background-color: $primary-color;
+  /*Added padding to give impression that dock area does not overlap menu line*/
+  padding-top: 7px;
+}
+
+#basegrid-right-scroll {
+  /*background-color added to dock background div to make padding area in basegrid-right same color as menu line*/
+  background-color: #E2E0DA!important;
+  /*margin-top: 7px;*/
+}
+
+table.basegrid body tr td {
+  background-color: white;
+}
+
+@import 'panels';
+@import 'icons';
+@import 'midnav';
+//@import 'menu';
+@import 'panel-themes';

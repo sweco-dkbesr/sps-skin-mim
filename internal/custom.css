@@ -1,0 +1,714 @@
+@charset "UTF-8";
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
+/* Colours */
+#dw_user_mode_select .toolbar span,
+#FavoritesSearch_sort .toolbar span {
+  color: #0e150c; }
+
+#dw_user_mode_select .toolbar:hover span,
+#FavoritesSearch_sort .toolbar:hover span {
+  color: #ffffff; }
+
+#profileselector a,
+#profileselector_newextent a {
+  padding-top: 2px !important; }
+
+#profileselector > ul,
+#profileselector_newextent > ul {
+  margin-left: -120; }
+
+#panel-top, #panel-bottom {
+  background: white;
+  border-bottom: 0; }
+
+#panel-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+
+#panel-top .li > a:hover {
+  color: #FF7300 !important; }
+
+#panel-top .inner.left {
+  float: right; }
+
+/**
+Fix for SPSP-3662
+ */
+.mmtopleft {
+  padding-left: 11px; }
+
+/**
+Fix for SPSP-3662
+ */
+.mmbottomright {
+  padding-bottom: 7px;
+  margin-right: 8px; }
+
+#mapcontainer_innerContentbottomleft {
+  margin-bottom: 27px;
+  margin-left: 9px; }
+
+.toolspacer-txt a {
+  margin-top: 0 !important; }
+
+.toolspacer-notxt a {
+  border-right: none !important;
+  border-left: none !important; }
+
+.toggle_selected {
+  opacity: 1 !important; }
+
+.spatial-suite > img {
+  display: none; }
+
+#panel-brand {
+  height: 41px;
+  background: #0E2C21;
+  border: none;
+  display: none; }
+
+#panel-brand .left {
+  border: none;
+  background-size: 100px;
+  margin-left: 7px; }
+
+#panel-middle {
+  background: #0E2C21;
+  margin: 10px 0 10px 0;
+  margin-top: -1px !important;
+  border: none !important;
+  border-radius: 0;
+  width: 100%; }
+
+#basegrid-right {
+  background-color: #0E2C21;
+  /*Added padding to give impression that dock area does not overlap menu line*/
+  padding-top: 7px; }
+
+#basegrid-right-scroll {
+  /*background-color added to dock background div to make padding area in basegrid-right same color as menu line*/
+  background-color: #E2E0DA !important;
+  /*margin-top: 7px;*/ }
+
+/* Panel THEMES */
+#panel-themes {
+  margin-top: -1px;
+  margin-left: 0;
+  border: 0;
+  border-radius: 0; }
+
+#panel-themes-header {
+  background: #0E2C21;
+  margin-top: 1px !important;
+  border: none !important;
+  border-radius: 0;
+  width: 100%; }
+
+/* #themegrid */
+.themegroup {
+  margin: 0;
+  background-color: #296238; }
+
+.themegroupheader {
+  background-color: #296238;
+  background: #296238;
+  opacity: 1; }
+
+.themegroupheader:hover {
+  background-color: #94acb8; }
+
+.themegroupheader > h4 {
+  color: white;
+  opacity: 1;
+  font-weight: 400; }
+
+/* A second level themegroupheader */
+.themegroupheader.sub {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #d1dbe0;
+  background: #d1dbe0;
+  border-bottom-color: #fafafa; }
+
+.themegroupheader.sub > h4 {
+  color: black !important;
+  padding-left: 3px;
+  opacity: 1;
+  font-weight: 400; }
+
+/* .theme */
+.theme {
+  background-image: none;
+  cursor: auto; }
+
+.theme:hover {
+  background: #296238 !important; }
+
+/* A small theme :) */
+.theme.small {
+  background: #82C17A !important; }
+
+.theme.small:hover {
+  background: #f9fafb !important; }
+
+.theme.small .txt h4 {
+  font-size: 11px;
+  margin: 4px 0 0;
+  cursor: pointer;
+  font-weight: 500; }
+
+.txt span {
+  font-weight: 100; }
+
+.theme .horiz-spacer {
+  float: left;
+  border-top: 1px dotted rgba(128, 128, 128, 0.31);
+  border-bottom: none;
+  width: 100%;
+  margin: 0;
+  display: none;
+  height: 0;
+  padding: 0; }
+
+.theme.small .right-wrapper {
+  width: 43px;
+  height: auto;
+  right: 0;
+  margin-top: 0; }
+
+.themegroupcontainer .theme.small h4 {
+  margin-bottom: 5px; }
+
+.themes-expander.up {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+  opacity: 0.6; }
+
+.themes-expander.down {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent !important;
+  border: none;
+  opacity: 0.6; }
+
+.themes-expander:hover {
+  border-color: transparent !important;
+  opacity: 1; }
+
+.counter.toggle,
+.themegroupheader .counter {
+  color: white; }
+
+.counter.toggle:hover {
+  background-color: transparent;
+  border-color: transparent; }
+
+.expander.down:hover {
+  background-color: transparent; }
+
+.expander.up:hover {
+  background-color: transparent; }
+
+.theme.small .state, .theme.small .delete, .theme.small .add {
+  margin-top: 2px; }
+
+.on.state {
+  background-size: 17px 17px;
+  border: none;
+  opacity: 1; }
+
+.off.state {
+  background-size: 17px 17px;
+  border: none !important;
+  opacity: 1; }
+
+.on.state:hover {
+  background-size: 17px 17px;
+  border: none;
+  opacity: 0.6 !important; }
+
+.off.state:hover {
+  background-size: 17px 17px;
+  border: none !important;
+  opacity: 0.3 !important; }
+
+.on.state.lock {
+  border: none !important;
+  opacity: 1 !important; }
+
+.off.state.lock {
+  border: none !important;
+  opacity: 0.3 !important; }
+
+.gr-loading, .gr-loading:hover {
+  background-color: #eee;
+  background-image: url("../images/modules/themeselectoractive/gr-loader.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 300px 30px; }
+
+/* Commented out to solve SPSP-4012 - why present at all?
+#basegrid {
+    margin-left: -1px;
+}
+*/
+#SpatialMap_Control_SpatialMapPanZoomBar_12 {
+  /*   visibility: hidden;*/ }
+
+#themegroup-basemap_tgcontainer > div > div span {
+  /*visibility: hidden;*/ }
+
+.themeStoreLabel {
+  color: white; }
+
+/* Theme selector button */
+#myposition > a.selected > img {
+  visibility: hidden; }
+
+#myposition a.selected {
+  background: url(/skins/sweco/images/buttons/location16x16_selected.png) no-repeat center center;
+  -webkit-background-size: 16px;
+  background-size: 16px 16px; }
+
+#info > a.selected > img {
+  visibility: hidden; }
+
+#info a.selected {
+  background: url(/skins/sweco/images/buttons/info_grp_selected.png) no-repeat center center;
+  -webkit-background-size: 16px;
+  background-size: 16px 16px; }
+
+#show_filters img {
+  filter: brightness(255); }
+
+/* --- dropdown menus --- */
+.menu > a {
+  text-transform: uppercase;
+  background-image: none !important; }
+
+li.menu a {
+  color: white !important;
+  opacity: 0.6;
+  padding-right: 10px !important;
+  padding-top: 5px !important; }
+
+li.toolbar > a:hover,
+li.menu > a:hover {
+  background-color: #0E2C21 !important;
+  border-color: #0E2C21 !important;
+  border-right: #0E2C21 !important;
+  border-bottom: #0E2C21 !important;
+  opacity: 1;
+  margin-bottom: 1px !important;
+  margin-top: 0;
+  margin-right: 2px !important; }
+
+.menu .sub {
+  margin-top: 9px;
+  background-color: #296238 !important;
+  border: none;
+  box-shadow: none; }
+
+#print > a:hover {
+  border: none; }
+
+/* ====== MIDNAV  ====== */
+/* Icons */
+.statebutton-icon,
+.togglebutton-icon,
+.toolbar-icon {
+  opacity: 0.6; }
+
+.statebutton-icon:hover,
+.togglebutton-icon:hover,
+.toolbar-icon:hover {
+  opacity: 1;
+  border-color: transparent; }
+
+.statebutton-icon a:hover,
+.togglebutton-icon a:hover,
+.toolbar-icon a:hover {
+  opacity: 1 !important;
+  border-color: transparent; }
+
+.statebutton-icon a:hover,
+.togglebutton-icon :hover,
+.toolbar-icon a:hover {
+  opacity: 1 !important;
+  border-color: transparent; }
+
+/* Here, the buttons are selected */
+.toolbar-icon a.selected,
+.statebutton-icon a.selected {
+  margin-right: 0; }
+
+.toolbar-icon a.selected:hover {
+  margin-top: 0 !important;
+  margin-left: 1px !important;
+  margin-right: 1px !important; }
+
+ul.midnav li.menu a:hover,
+ul.midnav li.menu a.hover,
+ul.midnav li.menu-icon a:hover,
+ul.midnav li.menu-icon a.hover,
+ul.midnav li.toolbar-icon a:hover,
+ul.midnav li.toolbar a:hover,
+ul.midnav li.statebutton-icon a:hover,
+ul.midnav li.togglebutton-icon a:hover,
+div.themes-expander:hover {
+  border: 1px solid transparent;
+  border-radius: 0; }
+
+ul.midnav li.menu a.selected,
+ul.midnav li.menu-icon a.selected,
+ul.midnav li.statebutton-icon a.selected,
+ul.midnav li.statebutton a.selected,
+ul.midnav li.togglebutton-icon a.toggle_selected {
+  border: 1px solid #ccc;
+  border-radius: 0; }
+
+/* SPECIFIC BUTTONS */
+/* Favorites */
+/* TODO: no difference whether selected or not */
+#favorites_save > a.selected > img {
+  visibility: hidden; }
+
+/* Pan */
+#pan > a.selected > img {
+  visibility: hidden; }
+
+.bum {
+  color: #0f0f0f; }
+
+/*#pan a {*/
+/*background: url(/skins/sweco/images/pan.svg) no-repeat center center;*/
+/*-webkit-background-size: 17px;*/
+/*background-size: 17px 17px;*/
+/*width:17px;*/
+/*height:17px;*/
+/*}*/
+#pan a.selected {
+  background: inline-image("images/svg/pan-selected.svg") no-repeat center center;
+  -webkit-background-size: 16px;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  border-color: transparent;
+  /* Only one variable per state - we remove the border */ }
+
+/* 2.1 eknap */
+#eknap > a.selected > img {
+  visibility: hidden; }
+
+#eknap a.selected {
+  background: url(/skins/sweco/images/modules/emdb/icon_e_selected.png) no-repeat center center;
+  -webkit-background-size: 16px;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px; }
+
+/* Zoomin - statebutton_icon  */
+#zoomin a.selected {
+  background: url(/skins/sweco/images/buttons/zoom_selected.png) no-repeat center center;
+  -webkit-background-size: 16px;
+  background-size: 16px 16px; }
+
+#zoomin > a.selected > img {
+  visibility: hidden; }
+
+.toolbar > a {
+  color: white; }
+
+.midnav .toolbar a,
+.topnav .toolbar a {
+  color: white !important;
+  opacity: 0.6; }
+
+.midnav .toolbar a:hover,
+.topnav .toolbar a:hover {
+  color: white !important;
+  opacity: 1; }
+
+.toolbar > a:hover {
+  color: #FF7300 !important; }
+
+.midnav li.menu > a {
+  border-color: transparent; }
+
+.midnav li.menu > ul.sub {
+  margin-top: 4px;
+  margin-left: 10; }
+
+.midnav li.menu > a.selected {
+  border-color: transparent !important;
+  color: #E4D159 !important;
+  opacity: 1; }
+
+.midnav li.menu > a.selected:hover {
+  margin-right: 2px !important; }
+
+.midnav li ul.sub li a {
+  background-color: #0E2C21;
+  font-weight: 100;
+  opacity: 1;
+  border-radius: 0; }
+
+.midnav li ul.sub {
+  border: none !important;
+  margin: 3px 0 0 2px;
+  background-color: #296238;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+.midnav .sub .toolbar a {
+  /* TODO: remove? */ }
+
+.togglebutton a:hover {
+  color: #E4D159 !important; }
+
+/* midnav stop */
+ul > li > a {
+  background-color: transparent !important; }
+
+/*** DIALOGS AND FORM ELEMENTS ***/
+.dialogpadding {
+  background-color: #E2E0DA !important; }
+
+.titleBar {
+  border-radius: 0;
+  background-color: #0E2C21; }
+
+.dialog {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid darkgrey !important;
+  border-radius: 0;
+  background-image: none !important; }
+
+/* Solves SPSP-2895: Button fix for Edge */
+@supports (-ms-ime-align: auto) and (font-variation-settings: normal) {
+  .selector {
+    property: value; }
+  button:active,
+  .ui-button:active {
+    transform: scale(0.93); } }
+
+/* Solves SPSDEV-550: Button fix for IE10+ */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  button:active,
+  .ui-button:active {
+    transform: scale(0.93); } }
+
+button,
+.ui-button {
+  color: white;
+  background-color: #296238;
+  background: #296238; }
+
+button:disabled,
+.ui-button:disabled {
+  background: #bccbd2;
+  background-color: #bccbd2;
+  font-style: italic;
+  color: gray; }
+
+input[type="checkbox"] {
+  margin-right: 3px !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: 20;
+  vertical-align: middle; }
+
+input[type="text"] {
+  padding-left: 3px; }
+
+textarea {
+  padding-left: 3px;
+  padding-top: 2px;
+  margin-bottom: 3px; }
+
+#panel-themes-footer {
+  display: none;
+  height: 0; }
+
+div.dialog-list a {
+  color: black !important; }
+
+div.dialog-list a:hover {
+  color: black !important;
+  font-weight: bolder; }
+
+/** LEGEND **/
+.legendcontainer {
+  background: #f5f3ee;
+  background-color: #f5f3ee;
+  z-index: 10;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: initial !important; }
+
+/* Toolbar */
+#SpatialMap_Control_SpatialMapPanZoomBar_12 {
+  margin-top: 5px;
+  margin-left: 5px; }
+
+.dynamiclayer_buttons {
+  margin-bottom: 3px;
+  color: black; }
+
+.dynamiclayer_buttons:nth-last-child(1) {
+  margin-bottom: 0; }
+
+#messagebox {
+  /* TODO */ }
+
+#status.li {
+  /*TODO font-size for stor erstat iframe med noget asynkront som trækker fra service*/ }
+
+#overviewbox {
+  z-index: 9999; }
+
+/*#favorites_save a {*/
+/*background: url(/skins/sweco/images/add-favourite.svg) no-repeat center center;*/
+/*-webkit-background-size: 17px;*/
+/*background-size: 17px 17px;*/
+/*width:17px;*/
+/*height:17px;*/
+/*}*/
+#favorites_save a.selected {
+  background: inline-image("images/svg/add-favourite.svg") no-repeat center center;
+  -webkit-background-size: 16px;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px; }
+
+/* TODO: move into responsive.css */
+/* Search box */
+.search-container {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 6px;
+  background-color: #dae2e7; }
+
+.search-container > input {
+  height: 100%;
+  margin-bottom: 0; }
+
+/* iPads (portrait and landscape) ----------- */
+@media (max-width: 1336px) {
+  /* Mobile styles */
+  .search-container {
+    background-color: #e3d062;
+    z-index: 8; }
+  .search-container > input {
+    background-color: transparent; }
+  .search-container:hover {
+    background-color: #f9fafb; }
+  .legencontainer {
+    top: 105px !important; }
+  #panel-middle {
+    /*height: 38px!important;*/ } }
+
+/* And now to something completely different: the pan/zoom bar */
+/* The return of the pan/zoom bar */
+/* The position of all dialog boxes (dialog.js) are dependent on the presence of the pan/zoom bar  */
+/* We can't just remove it ! */
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomout {
+  background: url(/skins/sweco/images/panzoombar/sweco_zoom_out_small.png) no-repeat center center; }
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomout_innerImage {
+  visibility: hidden; }
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomin {
+  background: url(/skins/sweco/images/panzoombar/sweco_zoom_in_small.png) no-repeat center center; }
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomin_innerImage {
+  visibility: hidden; }
+
+#OpenLayers_Control_PanZoomBar_ZoombarOpenLayers_Map_10 {
+  background: url(/skins/sweco/images/panzoombar/sweco_line_small.png) no-repeat center center; }
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_OpenLayers_Map_10_innerImage {
+  visibility: hidden; }
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_OpenLayers_Map_10 {
+  background: url(/skins/sweco/images/panzoombar/sweco_thumb_small.png) no-repeat center center; }
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_OpenLayers_Map_10_innerImage {
+  visibility: hidden; }
+
+/* And now to something completely different: the pan/zoom bar */
+/* currently semi-skinned but disabled */
+/*
+.SpatialMapControlSpatialMapPanZoomBar {
+    display:none!important;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomout {
+    display:none;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomout_innerImage {
+    display:none;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomin {
+    display:none;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_zoomin_innerImage {
+    display:none;
+}
+
+#OpenLayers_Control_PanZoomBar_ZoombarOpenLayers_Map_10 {
+    display:none;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_OpenLayers_Map_10_innerImage {
+    display:none;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_OpenLayers_Map_10 {
+    display:none;
+}
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12_OpenLayers_Map_10_innerImage {
+    display:none;
+}
+/* Disgusting hotfixes: TODO: make code beautiful again. */
+#admintools-menu a {
+  padding: 2px 4px 4px 2px !important; }
+
+.dialog-list > ul > li > a:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: black !important;
+  height: 25px !important; }
+
+/** Make white icons better visible in the global help dialog. */
+#divHelpIconTools .helpIMG {
+  filter: invert(0.8); }
+
+/**
+There has to be a little margin between the zoom buttons!
+ */
+.minimap .ol-zoom .ol-zoom-out {
+  margin-top: 3px; }
+
+.fav-checkbox {
+  padding-top: 5px; }
+
+#FavoritesSearch_fixed_container {
+  background-color: #E2E0DA !important; }
+
+#FavoritesSearch_fixed_bottom {
+  background-color: #E2E0DA !important; }

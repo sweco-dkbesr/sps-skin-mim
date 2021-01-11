@@ -1,13 +1,15 @@
 @import 'sass/svg/svg';
 
-$icon-size: 12px;
-$icon-padding: 3px;
+$icon-size: 8px;
+$icon-padding: 8px;
 
 %icon-base {
   background-size: contain;
   width: $icon-size;
   height: $icon-size;
   padding: $icon-padding;
+  margin-top: 4px;
+  margin-right: 6px;
 }
 
 /* Back */
@@ -207,21 +209,6 @@ $icon-padding: 3px;
   visibility: hidden;
 }
 
-%up {
-  @extend %icon-base;
-  @include icon-up;
-}
-
-.themes-expander.up {
-  @extend %up;
-}
-
-.themes-expander.down {
-  @extend %up;
-  transform: rotate(180deg);
-  transform-origin: center center;
-}
-
 /*Theme Store Setting*/
 %theme_store_setting {
   @extend %icon-base;
@@ -297,11 +284,26 @@ ul.midnav li.statebutton-icon a.selected:hover {
   padding-top: 13px;
 }
 
-//ul.midnav li.menu a.selected,
-//ul.midnav li.menu-icon a.selected,
-//ul.midnav li.statebutton-icon a.selected,
-//ul.midnav li.statebutton a.selected,
-//ul.midnav li.togglebutton-icon a.toggle_selected {
-//  background-color: $primary-color !important;
-//  border: none;
-//}
+.toolbar-icon,
+.toolspacer-icon,
+.toolspacer-notxt,
+.statebutton-icon {
+  padding-right: 5px;
+}
+
+.toolspacer-notxt {
+  opacity: 0.6;
+}
+
+.toolbar-icon a,
+.toolspacer-icon a,
+.toolspacer-notxt a,
+.statebutton-icon a {
+  opacity: 0.8;
+}
+
+.toolbar-icon a.ui-state-disabled,
+.toolspacer-icon a.ui-state-disabled,
+.statebutton-icon a.ui-state-disabled {
+  opacity: 0.5;
+}
