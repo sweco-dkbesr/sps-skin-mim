@@ -1,0 +1,130 @@
+/*** DIALOGS AND FORM ELEMENTS ***/
+
+$dialog-color: rgb(239, 239, 239);
+
+.dialogpadding {
+  background-color: $dialog-color!important;
+}
+
+.titleBar {
+  border-radius: 0;
+  background-color: $secondary-color;
+}
+
+.dialog {
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+  border: 1px solid $primary-color!important;
+  border-radius:0;
+  background-image: none!important;
+}
+
+/* Solves SPSP-2895: Button fix for Edge */
+@supports (-ms-ime-align:auto) and (font-variation-settings:normal) {
+  .selector { property:value; }
+  button:active,
+  .ui-button:active {
+    transform: scale(0.93);
+  }
+}
+
+/* Solves SPSDEV-550: Button fix for IE10+ */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  button:active,
+  .ui-button:active {
+    transform: scale(0.93);
+  }
+}
+
+button,
+.ui-button {
+  color: white;
+  background: $secondary-color-light;
+  border-width: 1px;
+}
+
+button:disabled,
+.ui-button:disabled {
+  background: $secondary-color-light;
+  font-style: italic;
+  color: gray;
+}
+
+button:nth-child(2n+1) {
+  padding-left: 3px;
+}
+
+
+input[type="checkbox"] {
+  margin-right: 3px!important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height:20px;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  padding-left:3px;
+}
+
+textarea {
+  padding-left:3px;
+  padding-top:2px;
+  margin-bottom:3px;
+}
+
+#panel-themes-footer {
+  display: none;
+  height:0;
+}
+
+div.dialog-list a {
+  color: black!important;
+}
+
+div.dialog-list a:hover {
+  color: black!important;
+  font-weight: bolder;
+}
+
+/** LEGEND **/
+
+.legendcontainer {
+  background: #f5f3ee;
+  background-color:#f5f3ee;
+  z-index: 10;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: initial !important;
+}
+
+/* Toolbar */
+
+#SpatialMap_Control_SpatialMapPanZoomBar_12 {
+  margin-top:5px;
+  margin-left:5px;
+}
+
+.dynamiclayer_buttons {
+  margin-bottom:3px;
+  color:black;
+}
+
+.dynamiclayer_buttons:nth-last-child(1)  {
+  margin-bottom:0;
+}
+
+#messagebox {
+  /* TODO */
+}
+
+#status.li {
+  /*TODO font-size for stor erstat iframe med noget asynkront som trækker fra service*/
+}
+
+#overviewbox {
+  z-index:9999;
+}

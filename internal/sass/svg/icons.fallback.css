@@ -8,7 +8,13 @@
 
 @mixin icon-add-user-theme { background-image: url('png/add-user-theme.png'); background-repeat: no-repeat; }
 
+@mixin icon-alert { background-image: url('png/alert.png'); background-repeat: no-repeat; }
+
 @mixin icon-back { background-image: url('png/back.png'); background-repeat: no-repeat; }
+
+@mixin icon-check-white { background-image: url('png/check-white.png'); background-repeat: no-repeat; }
+
+@mixin icon-check { background-image: url('png/check.png'); background-repeat: no-repeat; }
 
 @mixin icon-down { background-image: url('png/down.png'); background-repeat: no-repeat; }
 
@@ -36,7 +42,11 @@
 
 @mixin icon-info { background-image: url('png/info.png'); background-repeat: no-repeat; }
 
+@mixin icon-mflf { background-image: url('png/mflf.png'); background-repeat: no-repeat; }
+
 @mixin icon-mim-logo { background-image: url('png/mim-logo.png'); background-repeat: no-repeat; }
+
+@mixin icon-mim { background-image: url('png/mim.png'); background-repeat: no-repeat; }
 
 @mixin icon-myposition { background-image: url('png/myposition.png'); background-repeat: no-repeat; }
 
@@ -71,6 +81,10 @@
 @mixin icon-theme_store_setting { background-image: url('png/theme_store_setting.png'); background-repeat: no-repeat; }
 
 @mixin icon-themes_expand_horiz { background-image: url('png/themes_expand_horiz.png'); background-repeat: no-repeat; }
+
+@mixin icon-uncheck-white { background-image: url('png/uncheck-white.png'); background-repeat: no-repeat; }
+
+@mixin icon-uncheck { background-image: url('png/uncheck.png'); background-repeat: no-repeat; }
 
 @mixin icon-up-black { background-image: url('png/up-black.png'); background-repeat: no-repeat; }
 

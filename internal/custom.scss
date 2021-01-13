@@ -12,6 +12,11 @@ $secondary-color: #296238;
 $secondary-color-light:  #82C17A;
 
 $contrast-color: #FF7300;
+$alert-color: $contrast-color;
+
+%invert {
+  -webkit-filter: invert(100%);
+}
 
 #basegrid-right {
   //background-color: rgb(59, 68, 73);
@@ -30,8 +35,32 @@ table.basegrid body tr td {
   background-color: white;
 }
 
-@import 'panels';
 @import 'icons';
+@import 'panels';
 @import 'midnav';
-//@import 'menu';
 @import 'panel-themes';
+@import 'dialog';
+
+.toast-error {
+  background: $alert-color;
+}
+
+/**
+Fix for SPSP-3662
+ */
+.mmtopleft {
+  padding-left: 11px;
+}
+
+/**
+Fix for SPSP-3662
+ */
+.mmbottomright {
+  padding-bottom: 7px;
+  margin-right: 8px;
+}
+
+#mapcontainer_innerContentbottomleft {
+  margin-bottom: 27px;
+  margin-left: 9px;
+}

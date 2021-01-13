@@ -1,15 +1,14 @@
 @import 'sass/svg/svg';
 
-$icon-size: 8px;
-$icon-padding: 8px;
+$icon-size: 6px;
+$icon-padding: 6px;
+$icon-opacity: 0.8;
 
 %icon-base {
   background-size: contain;
   width: $icon-size;
   height: $icon-size;
   padding: $icon-padding;
-  margin-top: 4px;
-  margin-right: 6px;
 }
 
 /* Back */
@@ -75,7 +74,7 @@ $icon-padding: 8px;
 }
 
 #workinglayer-remove a {
-  @extend %back;
+  @extend %workinglayer-remove;
 }
 
 #workinglayer-remove a img {
@@ -240,7 +239,6 @@ $icon-padding: 8px;
 %expander {
   width: 7px;
   height: 4px;
-  //@extend %icon-base;
   @include icon-expander;
 }
 
@@ -253,26 +251,25 @@ $icon-padding: 8px;
   transform: rotate(180deg);
 }
 
-
 .toolbar-icon a.selected {
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
+/* *** */
 ul.midnav li.statebutton-icon a:hover,
-.themes-expander:hover,
 li.statebutton-icon a:hover,
 li.toolbar-icon a:hover,
 ul.midnav li.toolbar-icon a:hover {
   border-color: transparent;
   visibility: visible;
-  background-color: transparent!important;
+  background-color: transparent !important;
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 ul.midnav li.statebutton-icon a.selected {
   border-color: transparent;
   visibility: visible;
-  background-color: transparent!important;
+  background-color: transparent !important;
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
@@ -286,13 +283,15 @@ ul.midnav li.statebutton-icon a.selected:hover {
 
 .toolbar-icon,
 .toolspacer-icon,
-.toolspacer-notxt,
 .statebutton-icon {
   padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 3px;
 }
 
 .toolspacer-notxt {
   opacity: 0.6;
+  margin-top: 1px;
 }
 
 .toolbar-icon a,

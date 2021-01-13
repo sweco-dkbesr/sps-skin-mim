@@ -8,11 +8,17 @@
 }
 
 #panel-themes-header {
+
   background: $primary-color;
   margin-top: 1px !important;
   border: none !important;
   border-radius: 0;
   width: 100%;
+
+  .inner.right {
+      height: 37px;
+  }
+
 }
 
 /* Adapted to 3.12*/
@@ -83,7 +89,7 @@
 
 // TODO: $secondary-color-light - make lighter
 .theme.small:hover {
-  background: lighten($secondary-color-light, 10%)
+  background: lighten($secondary-color-light, 10%)!important;
 }
 
 .theme.small .txt h4 {
@@ -115,30 +121,56 @@
   margin-top: 0;
 }
 
-
 .themegroupcontainer .theme.small h4 {
   margin-bottom: 5px;
 }
 
+//.themes-expander.up {
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-color: transparent !important;
+//  border: none;
+//  opacity: 0.6;
+//}
+//
+//.themes-expander.down {
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-color: transparent !important;
+//  border: none;
+//  opacity: 0.6;
+//}
+
+%themes-expander {
+  width: 16px;
+  height: 18px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 3px;
+  margin-right: 10px;
+  @extend %icon-base;
+  @include icon-expander;
+  opacity: $icon-opacity;
+}
+
 .themes-expander.up {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-  opacity: 0.6;
+  @extend %themes-expander;
 }
 
 .themes-expander.down {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent !important;
-  border: none;
-  opacity: 0.6;
+  @extend %themes-expander;
+  transform: rotate(180deg);
 }
 
-.themes-expander:hover {
-  border-color: transparent !important;
+.themes-expander.up:hover,
+.themes-expander.down:hover {
+  @extend %themes-expander;
+  adding-top: 5px;
+  padding-left: 3px;
   opacity: 1;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  border-color: transparent;
+  background-color: transparent;
 }
 
 
@@ -160,7 +192,9 @@
   background-color: transparent;
 }
 
-.theme.small .state, .theme.small .delete, .theme.small .add {
+.theme.small .state,
+.theme.small .delete,
+.theme.small .add {
   margin-top: 2px;
 }
 
@@ -188,14 +222,35 @@
   opacity: 0.3 !important;
 }
 
-.on.state.lock {
-  border: none !important;
-  opacity: 1 !important;
+%lock {
+  width: 17px;
+  height: 17px;
+  background-size: contain;
+  margin: 2px 0 0;
 }
 
-.off.state.lock {
+%off-lock {
+  @extend %lock;
+  @include icon-off-lock;
+
+}
+
+%on-lock {
+  @extend %lock;
+  @include icon-on-lock;
+}
+
+.theme .state.off.lock {
+  @extend %off-lock;
+  @extend %invert;
   border: none !important;
-  opacity: 0.3 !important;
+  opacity: 0.6 !important;
+}
+
+.theme .state.on.lock {
+  @extend %off-lock;
+  border: none !important;
+  opacity: 1 !important;
 }
 
 .gr-loading, .gr-loading:hover {
@@ -251,16 +306,14 @@
 .themegroup {
 
   %up-black {
-    @include icon-up-black;
+    @include icon-up;
     width: 7px;
     height: 4px;
     background-size: contain;
     margin-right: 5px;
     margin-top: 9px;
-    filter: invert(30%) sepia(19%) saturate(1311%) hue-rotate(83deg) brightness(97%) contrast(88%);
+    // filter: invert(30%) sepia(19%) saturate(1311%) hue-rotate(83deg) brightness(97%) contrast(88%);
   }
-
-  /* black to primary */
 
   .expander.up {
     @extend %up-black;
@@ -288,4 +341,12 @@
   @extend %state-button;
   @include icon-power-on-black;
   filter: invert(30%) sepia(19%) saturate(1311%) hue-rotate(83deg) brightness(97%) contrast(88%);
+}
+
+.themeStoreLabel {
+  visibility: hidden;
+}
+
+.counter.hasvisible {
+  background: transparent;
 }

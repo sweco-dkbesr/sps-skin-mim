@@ -9,7 +9,7 @@
 
     a {
       span {
-        font-size: 13px;
+        // font-size: 13px;
       }
     }
 
@@ -30,17 +30,20 @@
 .midnav .toolbar a,
 .topnav .toolbar a {
   color:white!important;
-  opacity:0.6;
+  opacity:0.6!important;
 }
 
 .midnav .toolbar a:hover,
 .topnav .toolbar a:hover {
-  color:$contrast-color;
+  color:white;
   opacity:1;
 }
 
 .toolbar > a:hover {
-  color: $contrast-color!important;
+  //color: $contrast-color!important;
+  color: white;
+  opacity: 1;
+
 }
 
 .midnav li.menu > a {
@@ -48,7 +51,7 @@
 }
 
 .midnav li.menu > ul.sub {
-  margin-top: 4px;
+  margin-top: 9px;
   margin-left: 10px;
 }
 
@@ -56,6 +59,10 @@
   border-color:transparent!important;
   color:$contrast-color!important;
   opacity:1;
+}
+
+ul.midnav li ul.sub li a:hover {
+  opacity:1!important;
 }
 
 .midnav li.menu > a.selected:hover {
@@ -100,6 +107,8 @@ li.menu a:hover {
 
 .midnav .sub .toolbar a {
   background-color: $secondary-color !important;
+  background-image: none!important;
+  width: 100% !important;
 }
 
 .midnav li ul.sub li a {
@@ -119,28 +128,23 @@ li.menu a:hover {
 }
 
 ul.midnav li ul.sub li.toolspacer-txt a,
-ul.midnav li ul.sub li.toolspacer-notxt a
 {
   background: $secondary-color;
   opacity: 0.8;
 }
 
-ul.midnav li ul.sub li.togglebutton a {
+ul.midnav li ul.sub li.toolspacer-notxt a
+{
   background: $secondary-color;
+  opacity: 0.8;
+  height: 0;
+  padding-top: 0!important;
 }
-
 
 ul.midnav li ul.sub li.toolspacer-txt a:hover {
   background: $secondary-color;
   opacity: 0.8;
 }
-
-//ul.midnav li ul.sub li.toolspacer-txt a:hover,
-//ul.midnav li ul.sub li.toolspacer-notxt a:hover {
-//  opacity: 1;
-//  background: $secondary-color!important;
-//  margin-bottom: 4px;
-//}
 
 li.menu a.selected {
   color: $contrast-color;
@@ -150,17 +154,30 @@ li.menu a.selected {
 ul.sub li.toolspacer-txt a:hover {
   background: $secondary-color!important;
   margin-bottom: 4px !important;
-  //background-color: $primary-color !important;
-  //border-color: $primary-color !important;
-  //border-right: $primary-color !important;
-  //border-bottom: $primary-color !important;
   border-bottom: 1px solid #ccc!important;
-  //opacity: 1;
-  //margin-top: 0;
-  //margin-right: 2px !important;
-  //color: $contrast-color;
 }
-//
-//ul.midnav li ul.sub li.toolspacer-txt a:hover {
-//  border-bottom: 1px solid #ccc!important;
-//}
+
+ul.midnav li ul.sub li.togglebutton a {
+  padding: 4px 8px 4px 24px;
+  //background-image: url("../images/states/check.png");
+  @include icon-uncheck-white;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  background-color: $secondary-color;
+  opacity: 0.6;
+}
+
+ul.midnav li ul.sub li.togglebutton a.toggle_selected {
+  padding: 4px 8px 4px 24px;
+  //background-image: url("../images/states/check.png");
+  @include icon-check-white;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  background-color: $secondary-color;
+  opacity: 0.6;
+}
+
+ul.midnav li ul.sub li.togglebutton:hover {
+  background-color: $secondary-color;
+  opacity: 1;
+}

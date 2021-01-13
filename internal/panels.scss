@@ -21,14 +21,18 @@
 @import 'sass/svg/svg';
 
 .spatial-suite {
+  @include icon-mim;
   background-size: contain;
-  @include icon-mim-logo;
   width: 320px;
   height: 64px;
-}
+  float:left;
+  margin-left: 9px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 
-.spatial-suite img {
-  visibility: hidden;
+  img {
+    visibility: hidden;
+  }
 }
 
 #panel-bottom {
@@ -69,17 +73,6 @@ ul.topnav li.toolbar > a:hover {
   color: $primary-color!important;
   opacity: 1;
   background-color: transparent!important;
-}
-
-.spatial-suite {
-  float:left;
-  font-size:16px;
-  margin-left:9px;
-  margin-top:9px;
-}
-
-.spatial-suite img {
-  visibility: hidden;
 }
 
 #panel-brand .left {
