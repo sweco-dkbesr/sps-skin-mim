@@ -21,9 +21,10 @@
 @import 'sass/svg/svg';
 
 .spatial-suite {
-  @include icon-mim;
-  background-size: contain;
-  width: 320px;
+  //@include icon-mim;
+  //background-size: contain;
+  //width: 320px;
+  width: 246.6px;
   height: 64px;
   float:left;
   margin-left: 9px;
@@ -31,7 +32,8 @@
   margin-bottom: 9px;
 
   img {
-    visibility: hidden;
+    width: 246.6px;
+    height: 64px;
   }
 }
 
