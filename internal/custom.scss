@@ -4,15 +4,68 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
 
+//$skin: mim;
+//$skin: mst;
+$skin: kst;
+//$skin: nst;
+
 /* Define colours */
+/**
+Lighten: http://scg.ar-ch.org/
+Filter Calculator
+ */
+
+/* Initialize variables */
+$secondary-color: none;
+$secondary-color-light: none;
+$contrast-color: none;
+$filter-from-white-to-contrast-color: none;
+$alert-color: none;
+
+/* Define colours and filters */
+$p7405: #E7CD14;
+$filter-white-to-p7405: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+$filter-black-to-p7405: invert(83%) sepia(72%) saturate(1301%) hue-rotate(345deg) brightness(93%) contrast(93%);
+
+$p144: #ED8B00;
+$filter-white-to-p144: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+$filter-black-to-p144: invert(67%) sepia(51%) saturate(7051%) hue-rotate(15deg) brightness(109%) contrast(101%);
 
 $primary-color: #0E2C21;
 
-$secondary-color: #296238;
-$secondary-color-light:  #82C17A;
+/* Set colors */
+@if $skin == mim {
+  $secondary-color: #296238;
+  $secondary-color-light: #65bf7d; // 30%
+  $contrast-color: #FF7300;
+  $filter-from-white-to-contrast-color: $filter-white-to-p7405;
+  $alert-color: $contrast-color;
+}
 
-$contrast-color: #FF7300;
-$alert-color: $contrast-color;
+@if $skin == kst {
+  $secondary-color: #327394;
+  $secondary-color-light:  #88bcd7; // 30%
+  $contrast-color: #FF7300;
+  $filter-from-white-to-contrast-color: $filter-white-to-p7405;
+  $alert-color: $contrast-color;
+}
+
+@if $skin == mst {
+  $secondary-color: #296238;
+  $secondary-color-light:  #65bf7d; // 30%
+  $contrast-color: #FF7300;
+  $filter-from-white-to-contrast-color: $filter-white-to-p7405;
+  $alert-color: $contrast-color;
+}
+
+@if $skin == nst {
+  $secondary-color: #2C441F;
+  $secondary-color-light:  #70ad4f; // 30%
+  $contrast-color: $p7405;
+  $filter-from-white-to-contrast-color: $filter-white-to-p7405;
+  $alert-color: $contrast-color;
+}
+
 
 %invert {
   -webkit-filter: invert(100%);

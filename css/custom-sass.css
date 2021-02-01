@@ -4,6 +4,13 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
 /* Define colours */
+/**
+Lighten: http://scg.ar-ch.org/
+Filter Calculator
+ */
+/* Initialize variables */
+/* Define colours and filters */
+/* Set colors */
 .theme .state.off.lock {
   -webkit-filter: invert(100%);
 }
@@ -25,11 +32,12 @@ table.basegrid body tr td {
 }
 
 .themes-expander.up:hover,
-.themes-expander.down:hover, .themes-expander.down, .themes-expander.up, #zoomin a, #theme_store_setting a, #resetthemes a, #print_quick a, #pan a, #info a, #eknap a, #myposition a, #fullextent a, #favorites_save a, #forward a, #workinglayer-remove a, #theme_collapse a, #dsfilter a, #extended-themeselector a, #back a {
+.themes-expander.down:hover, .themes-expander.down, .themes-expander.up, #zoomin a, #theme_store_setting a, #resetthemes a, #themes_expand_horiz, #print_quick a, #pan a, #info a, #eknap a, #myposition a, #fullextent a, #favorites_save a, #forward a, #workinglayer-remove a, #theme_collapse a, #dsfilter a, #extended-themeselector a, #back a {
   background-size: contain;
   width: 6px;
   height: 6px;
   padding: 6px;
+  border-radius: 0;
 }
 
 /* Back */
@@ -160,6 +168,16 @@ table.basegrid body tr td {
 }
 
 #print_quick a img {
+  visibility: hidden;
+}
+
+/* Themes expander horiz */
+#themes_expand_horiz {
+  background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2211px%22%20height%3D%229px%22%20viewBox%3D%220%200%2011%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%20%20%20%20%3Ctitle%3Ethemes_expand_horiz%3C%2Ftitle%3E%20%20%20%20%3Cg%20id%3D%22themes_expand_horiz%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Group%22%20fill%3D%22%23FFFFFF%22%20fill-rule%3D%22nonzero%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M3.58536585%2C6.14635004%20C3.44922286%2C6.14712858%203.31836818%2C6.0936809%203.22170732%2C5.99780488%20L1.68512195%2C4.46121951%20C1.48653182%2C4.26144423%201.48653182%2C3.93879967%201.68512195%2C3.73902439%20L3.22170732%2C2.20243902%20C3.42113599%2C2.00159597%203.74562035%2C2.00044938%203.94646341%2C2.19987806%20C4.14730647%2C2.39930673%204.14845306%2C2.72379108%203.94902439%2C2.92463415%20L2.77097561%2C4.09756098%20L3.94390244%2C5.2704878%20C4.09098509%2C5.41636564%204.13571454%2C5.63647784%204.05723478%2C5.82819267%20C3.97875502%2C6.01990751%203.79252014%2C6.1454729%203.58536585%2C6.14635004%20Z%22%20id%3D%22Path%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M6.65853659%2C6.14635019%20C6.4504496%2C6.14755159%206.26231266%2C6.02274685%206.18251732%2C5.8305637%20C6.10272198%2C5.63838055%206.14713027%2C5.41702194%206.29487805%2C5.2704878%20L7.47292683%2C4.09756098%20L6.29487805%2C2.92463415%20C6.12084603%2C2.72141547%206.13254689%2C2.41848591%206.32173591%2C2.22929689%20C6.51092494%2C2.04010786%206.81385449%2C2.02840701%207.01707317%2C2.20243902%20L8.55365854%2C3.73902439%20C8.75224867%2C3.93879967%208.75224867%2C4.26144423%208.55365854%2C4.46121951%20L7.01707317%2C5.99780488%20C6.92167138%2C6.09242994%206.79290579%2C6.14577568%206.65853659%2C6.14635019%20Z%22%20id%3D%22Path%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M9.73170732%2C8.19512195%20C9.44882976%2C8.19512195%209.2195122%2C7.96580438%209.2195122%2C7.68292683%20L9.2195122%2C0.512195122%20C9.2195122%2C0.229317567%209.44882976%2C-3.55271368e-15%209.73170732%2C-3.55271368e-15%20C10.0145849%2C-3.55271368e-15%2010.2439024%2C0.229317567%2010.2439024%2C0.512195122%20L10.2439024%2C7.68292683%20C10.2439024%2C7.96580438%2010.0145849%2C8.19512195%209.73170732%2C8.19512195%20Z%22%20id%3D%22Path%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0.512195122%2C8.19512195%20C0.229317567%2C8.19512195%20-1.11022302e-14%2C7.96580438%20-1.11022302e-14%2C7.68292683%20L-1.11022302e-14%2C0.512195122%20C-1.11022302e-14%2C0.229317567%200.229317567%2C-3.55271368e-15%200.512195122%2C-3.55271368e-15%20C0.795072677%2C-3.55271368e-15%201.02439024%2C0.229317567%201.02439024%2C0.512195122%20L1.02439024%2C7.68292683%20C1.02439024%2C7.96580438%200.795072677%2C8.19512195%200.512195122%2C8.19512195%20Z%22%20id%3D%22Path%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M8.19512195%2C4.6097561%20L2.04878049%2C4.6097561%20C1.76590293%2C4.6097561%201.53658537%2C4.38043853%201.53658537%2C4.09756098%20C1.53658537%2C3.81468342%201.76590293%2C3.58536585%202.04878049%2C3.58536585%20L8.19512195%2C3.58536585%20C8.47799951%2C3.58536585%208.70731707%2C3.81468342%208.70731707%2C4.09756098%20C8.70731707%2C4.38043853%208.47799951%2C4.6097561%208.19512195%2C4.6097561%20Z%22%20id%3D%22Path%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+
+#themes_expand_horiz a img {
   visibility: hidden;
 }
 
@@ -433,19 +451,19 @@ li.menu a:hover {
 
 .menu .sub {
   margin-top: 9px;
-  background-color: #296238 !important;
+  background-color: #327394 !important;
   border: none;
   box-shadow: none;
 }
 
 .midnav .sub .toolbar a {
-  background-color: #296238 !important;
+  background-color: #327394 !important;
   background-image: none !important;
   width: 100% !important;
 }
 
 .midnav li ul.sub li a {
-  background-color: #296238;
+  background-color: #327394;
   font-weight: 100;
   opacity: 1;
   border-radius: 0;
@@ -454,26 +472,26 @@ li.menu a:hover {
 .midnav li ul.sub {
   border: none !important;
   margin: 3px 0 0 2px;
-  background: #296238;
+  background: #327394;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
 ul.midnav li ul.sub li.toolspacer-txt a {
-  background: #296238;
+  background: #327394;
   opacity: 0.8;
 }
 
 ul.midnav li ul.sub li.toolspacer-notxt a {
-  background: #296238;
+  background: #327394;
   opacity: 0.8;
   height: 0;
   padding-top: 0 !important;
 }
 
 ul.midnav li ul.sub li.toolspacer-txt a:hover {
-  background: #296238;
+  background: #327394;
   opacity: 0.8;
 }
 
@@ -483,7 +501,7 @@ li.menu a.selected {
 }
 
 ul.sub li.toolspacer-txt a:hover {
-  background: #296238 !important;
+  background: #327394 !important;
   margin-bottom: 4px !important;
   border-bottom: 1px solid #ccc !important;
 }
@@ -494,7 +512,7 @@ ul.midnav li ul.sub li.togglebutton a {
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: 5px center;
-  background-color: #296238;
+  background-color: #327394;
   opacity: 0.6;
 }
 
@@ -504,12 +522,12 @@ ul.midnav li ul.sub li.togglebutton a.toggle_selected {
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: 5px center;
-  background-color: #296238;
+  background-color: #327394;
   opacity: 0.6;
 }
 
 ul.midnav li ul.sub li.togglebutton:hover {
-  background-color: #296238;
+  background-color: #327394;
   opacity: 1;
 }
 
@@ -544,16 +562,16 @@ ul.midnav li ul.sub li.togglebutton:hover {
 /* #themegrid */
 .themegroup {
   margin: 0;
-  background: #296238;
+  background: #327394;
 }
 
 .themegroupheader {
-  background: #296238;
+  background: #327394;
   opacity: 1;
 }
 
 .themegroupheader:hover {
-  background: #82C17A;
+  background: #88bcd7;
 }
 
 .themegroupheader > h4 {
@@ -566,7 +584,7 @@ ul.midnav li ul.sub li.togglebutton:hover {
 .themegroupheader.sub {
   margin-left: 0;
   margin-right: 0;
-  background: #82C17A;
+  background: #88bcd7;
   border-bottom-color: #fafafa;
 }
 
@@ -585,16 +603,16 @@ ul.midnav li ul.sub li.togglebutton:hover {
 }
 
 .theme:hover {
-  background: #296238 !important;
+  background: #327394 !important;
 }
 
 /* A small theme :) */
 .theme.small {
-  background: #82C17A !important;
+  background: #88bcd7 !important;
 }
 
 .theme.small:hover {
-  background: #a3d19d !important;
+  background: #aed1e4 !important;
 }
 
 .theme.small .txt h4 {
@@ -811,7 +829,7 @@ ul.midnav li ul.sub li.togglebutton:hover {
 
 .titleBar {
   border-radius: 0;
-  background-color: #296238;
+  background-color: #327394;
 }
 
 .dialog {
@@ -844,13 +862,13 @@ ul.midnav li ul.sub li.togglebutton:hover {
 button,
 .ui-button {
   color: white;
-  background: #82C17A;
+  background: #88bcd7;
   border-width: 1px;
 }
 
 button:disabled,
 .ui-button:disabled {
-  background: #82C17A;
+  background: #88bcd7;
   font-style: italic;
   color: gray;
 }

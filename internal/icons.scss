@@ -9,6 +9,7 @@ $icon-opacity: 0.8;
   width: $icon-size;
   height: $icon-size;
   padding: $icon-padding;
+  border-radius: 0;
 }
 
 /* Back */
@@ -194,6 +195,20 @@ $icon-opacity: 0.8;
   visibility: hidden;
 }
 
+/* Themes expander horiz */
+%themes_expand_horiz {
+  @extend %icon-base;
+  @include icon-themes_expand_horiz;
+}
+
+#themes_expand_horiz {
+  @extend %themes_expand_horiz;
+}
+
+#themes_expand_horiz a img {
+  visibility: hidden;
+}
+
 /* Reset themes */
 %resetthemes {
   @extend %icon-base;
@@ -252,7 +267,7 @@ $icon-opacity: 0.8;
 }
 
 .toolbar-icon a.selected {
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: $filter-from-white-to-contrast-color;
 }
 
 /* *** */
@@ -263,14 +278,14 @@ ul.midnav li.toolbar-icon a:hover {
   border-color: transparent;
   visibility: visible;
   background-color: transparent !important;
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: $filter-from-white-to-contrast-color;
 }
 
 ul.midnav li.statebutton-icon a.selected {
   border-color: transparent;
   visibility: visible;
   background-color: transparent !important;
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: $filter-from-white-to-contrast-color;
 }
 
 ul.midnav li.statebutton-icon a.selected:hover {

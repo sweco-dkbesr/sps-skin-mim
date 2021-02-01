@@ -9,7 +9,7 @@
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "run-grunt": "npx grunt",
-    "sass-build": "sass custom.scss ../css/custom-sass.css",
+    "sass-build": "sass custo m.scss ../css/custom-sass.css",
     "sass-build-compressed": "sass custom.scss ../css/custom-sass.css --style=compressed",
     "sass-watch": "sass custom.scss ../css/custom-sass.css --watch",
     "reload-module-mim": "curl http://localhost:8080/admin?command=modules&deploy=mim"

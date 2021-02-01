@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy>
+
+    <version>4.2.0</version>          <!-- The version of SpatialMap this module comes from -->
+
+    <param name="module.skins.deploy.kdi" backendonly="true">kdi</param>
+
+    <!-- Copy base skin images and css first to have something to fall back on -->
+    <copydir fromdir="[cbinfo.wwwroot.dir]/skins/base/css"         todir="[cbinfo.wwwroot.dir]/skins/[module.skins.deploy.kdi]/css" />
+    <copydir fromdir="[cbinfo.wwwroot.dir]/skins/base/images"      todir="[cbinfo.wwwroot.dir]/skins/[module.skins.deploy.kdi]/images" />
+
+    <!-- Copy custom skin on top of base skin copy -->
+    <copydir fromdir="[module:kdi.dir]/css"                todir="[cbinfo.wwwroot.dir]/skins/[module.skins.deploy.kdi]/css" replacetext="true" charset="utf-8" />
+    <copydir fromdir="[module:kdi.dir]/images"             todir="[cbinfo.wwwroot.dir]/skins/[module.skins.deploy.kdi]/images" />
+
+</deploy>
